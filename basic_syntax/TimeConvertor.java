@@ -31,7 +31,7 @@ import java.util.Scanner;
 // 05:11
 //
 
-public class TimeConverter {
+public class TimeConvertor {
 
   public static void main(String[] args) {
     final Scanner keyboard = new Scanner(System.in);
