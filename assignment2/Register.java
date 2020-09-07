@@ -31,7 +31,7 @@ public class Register {
   /**
    * Get the Ticket with the given ID from the collection.
    * 
-   * The ticket will be removed from the current list of tickets.
+   * Tickets can be retrieved many times.
    */
   public Ticket retrieve(String ticketID) {
     int ticketIndex = -1;
@@ -43,7 +43,7 @@ public class Register {
     }
 
     if (ticketIndex >= 0) {
-      return tickets.remove(ticketIndex);
+      return tickets.get(ticketIndex);
     } else {
       return null;
     }
