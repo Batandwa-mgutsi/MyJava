@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import org.junit.Test;
+
 /**
  * Program to calculate the sum of entered amounts.
  * 
@@ -26,5 +28,10 @@ public class SumCosts {
 
     System.out.println(sum.toString());
     keyboard.close();
+  }
+
+  @Test
+  public void test() {
+
   }
 }
