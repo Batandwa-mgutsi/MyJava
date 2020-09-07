@@ -24,7 +24,7 @@ public class SumCosts {
       }
     } while (!quit);
 
-    System.out.println(sum.toString());
+    System.out.printf("Total: %s", sum.toString());
     keyboard.close();
   }
 }
