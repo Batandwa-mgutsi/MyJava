@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * A Register stores a collectionof Tickets. A Ticket may be retrieved given its
@@ -7,21 +5,22 @@ import java.util.List;
  */
 public class Register {
 
-  private List<Ticket> tickets = new ArrayList<Ticket>();
+  private Ticket[] tickets = new Ticket[100];
+  private int numTickets = 0;
 
   /**
    * Stores the given ticket in the register.
    */
   public void add(Ticket ticket) {
-    tickets.add(ticket);
+    tickets[numTickets++] = ticket;
   }
 
   /**
    * Determine whether a ticket with the given ID is in the collection.
    */
   public boolean contains(String ticketID) {
-    for (Ticket ticket : tickets) {
-      if (ticket.ID().equals(ticketID))
+    for (int index = 0; index < numTickets; index++) {
+      if (tickets[index].ID().equals(ticketID))
         return true;
     }
 
@@ -35,15 +34,15 @@ public class Register {
    */
   public Ticket retrieve(String ticketID) {
     int ticketIndex = -1;
-    for (int index = 0; index < tickets.size(); index++) {
-      if (tickets.get(index).ID().equals(ticketID)) {
+    for (int index = 0; index < numTickets; index++) {
+      if (tickets[index].ID().equals(ticketID)) {
         ticketIndex = index;
         break;
       }
     }
 
     if (ticketIndex >= 0) {
-      return tickets.get(ticketIndex);
+      return tickets[ticketIndex];
     } else {
       return null;
     }
