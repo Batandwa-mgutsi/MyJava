@@ -27,7 +27,7 @@ public class Alphabet {
   public boolean canSpell(String word) {
     for (int index = 0; index < word.length(); index++) {
       final char letter = word.charAt(index);
-      if (!this.letters.contains("" + letter)) {
+      if (!this.contains(letter)) {
         return false;
       }
     }
