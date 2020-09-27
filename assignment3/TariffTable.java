@@ -56,8 +56,7 @@ public class TariffTable {
    * <timePeriod_n>
    * </pre>
    * 
-   * The returned string ends with a newline if there are tariffs entered. An
-   * empty String is returned when there no tariifs entered.
+   * An empty String is returned when there is no tariffs entered.
    */
   @Override
   public String toString() {
@@ -68,6 +67,6 @@ public class TariffTable {
         out.append(parkingTariffs[index].toString() + "\n");
     }
 
-    return out.toString();
+    return out.toString().trim();
   }
 }

@@ -187,7 +187,7 @@ public class TestOfTeriffTable {
     }
 
     @Test
-    @DisplayName("Should return the correct string representation in the form: <timePeriod_0>\n<timePeriod_1>\n...<timePeriod_n>\n")
+    @DisplayName("Should return the correct string representation in the form: <timePeriod_0>\n<timePeriod_1>\n...<timePeriod_n>")
     public void shouldReturnCorrectStringRepresentation() {
       final TariffTable instance = new TariffTable(5);
       instance.addTariff(mockTimePeriod1, mockMoney1);
@@ -195,7 +195,7 @@ public class TestOfTeriffTable {
       instance.addTariff(mockTimePeriod3, mockMoney3);
 
       assertEquals(
-          "ThisIsMockTimePeriodOne : ThisIsMockMoneyOne\nThisIsMockTimePeriodTwo : ThisIsMockMoneyTwo\nThisIsMockTimePeriodThree : ThisIsMockMoneyThree\n",
+          "ThisIsMockTimePeriodOne : ThisIsMockMoneyOne\nThisIsMockTimePeriodTwo : ThisIsMockMoneyTwo\nThisIsMockTimePeriodThree : ThisIsMockMoneyThree",
           instance.toString());
     }
   }
