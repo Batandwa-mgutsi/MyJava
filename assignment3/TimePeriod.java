@@ -61,8 +61,8 @@ public class TimePeriod {
    * "[<duration> .. <duration>]"
    */
   public String toString() {
-    final String lowerBoundString = Duration.format(this.lowerBound, "hour", "minute");
-    final String upperBoundString = Duration.format(this.upperBound, "hour", "minute");
+    final String lowerBoundString = Duration.format(this.lowerBound, TimeUnit.HOUR, TimeUnit.MINUTE);
+    final String upperBoundString = Duration.format(this.upperBound, TimeUnit.HOUR, TimeUnit.MINUTE);
     return String.format("[%s .. %s]", lowerBoundString, upperBoundString);
   }
 }
