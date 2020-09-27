@@ -60,7 +60,7 @@ public class TestOfTeriffTable {
             instance.addTariff(TimePeriodZeroToTenMinutes, MoneyThreeRand);
           });
 
-          assertEquals("TimePeriod:addTariff(): precondition not met.", e.getMessage());
+          assertEquals("Tariff periods must be adjacent.", e.getMessage());
         }
 
         @Test
@@ -72,7 +72,7 @@ public class TestOfTeriffTable {
             instance.addTariff(TimePeriodZeroToTenMinutes, MoneyThreeRand);
           });
 
-          assertEquals("TimePeriod:addTariff(): precondition not met.", e.getMessage());
+          assertEquals("Tariff periods must be adjacent.", e.getMessage());
         }
       }
 

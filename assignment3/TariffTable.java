@@ -24,11 +24,8 @@ public class TariffTable {
     if (nextInsertIndex > 0) {
       // Get the last non null element to use as our previous element
       ParkingTariff prev = parkingTariffs[nextInsertIndex - 1];
-      if (!prev.timePeriod().precedes(period)) {
-        throw new IllegalArgumentException("TimePeriod:addTariff(): precondition not met.");
-      } else if (!prev.timePeriod().adjacent(period)) {
+      if (!prev.timePeriod().precedes(period) || (!prev.timePeriod().adjacent(period)))
         throw new IllegalArgumentException("Tariff periods must be adjacent.");
-      }
     }
 
     final ParkingTariff insert = new ParkingTariff(period, tariff);
